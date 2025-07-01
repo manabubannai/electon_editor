@@ -19,6 +19,50 @@
     </style>
 </head>
 <body>
+    <script>
+        function changeFontSize(size) {
+            document.getElementById('editor').style.fontSize = size + 'px';
+        }
+        function changeFontFamily(font) {
+            document.getElementById('editor').style.fontFamily = font;
+        }
+        function changeLineHeight(height) {
+            document.getElementById('editor').style.lineHeight = height;
+        }
+        function changeWidth(width) {
+            document.body.style.maxWidth = width + 'px';
+        }
+    </script>
+    <select onchange="changeFontSize(this.value)">
+        <option value="12">12px</option>
+        <option value="14">14px</option>
+        <option value="16" selected>16px</option>
+        <option value="18">18px</option>
+        <option value="20">20px</option>
+        <option value="24">24px</option>
+        <option value="28">28px</option>
+        <option value="32">32px</option>
+    </select>
+    <select onchange="changeFontFamily(this.value)">
+        <option value="sans-serif">ゴシック体</option>
+        <option value="serif">明朝体</option>
+        <option value="monospace">等幅</option>
+        <option value="cursive">筆記体</option>
+    </select>
+    <select onchange="changeLineHeight(this.value)">
+        <option value="1.2">1.2</option>
+        <option value="1.5" selected>1.5</option>
+        <option value="1.8">1.8</option>
+        <option value="2.0">2.0</option>
+        <option value="2.5">2.5</option>
+    </select>
+    <select onchange="changeWidth(this.value)">
+        <option value="480">480px</option>
+        <option value="680" selected>680px</option>
+        <option value="800">800px</option>
+        <option value="1000">1000px</option>
+        <option value="1200">1200px</option>
+    </select>
     <textarea id="editor" placeholder="ここに入力してください..."></textarea>
 </body>
 </html>
