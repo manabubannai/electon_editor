@@ -1,7 +1,8 @@
 {
-  "name": "electron-simple-app",
+  "name": "just-a-paper",
+  "productName": "Just a Paper",
   "version": "1.0.0",
-  "description": "最もシンプルなElectronアプリケーション",
+  "description": "Just a Paper",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
