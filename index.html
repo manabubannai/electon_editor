@@ -22,9 +22,14 @@
             if (lineHeightValue) lineHeightValue.textContent = height;
         }
         function changeWidth(width) {
-            document.body.style.maxWidth = width + 'px';
+            document.getElementById('editor').style.maxWidth = width + 'px';
             const widthValue = document.getElementById('widthValue');
             if (widthValue) widthValue.textContent = width + 'px';
+        }
+        function autoResize() {
+            const editor = document.getElementById('editor');
+            editor.style.height = 'auto';
+            editor.style.height = editor.scrollHeight + 'px';
         }
         function toggleDrawer() {
             document.getElementById('drawer').classList.toggle('open');
@@ -35,6 +40,12 @@
                     .forEach(sel => sel.dispatchEvent(new Event('change')));
             document.querySelectorAll('#drawer input[type="range"]')
                     .forEach(range => range.dispatchEvent(new Event('input')));
+
+            // 初回リサイズ
+            autoResize();
+
+            // 入力時に自動で高さ拡張
+            document.getElementById('editor').addEventListener('input', autoResize);
         });
     </script>
 
