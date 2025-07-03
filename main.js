@@ -4,8 +4,8 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1500,
     height: 1000,
-    minWidth: 1500,
-    minHeight: 1000,
+    // minWidth: 1500,
+    // minHeight: 1000,
     center: true,
     title: 'Just a Paper',
     webPreferences: {
