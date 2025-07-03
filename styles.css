@@ -9,8 +9,12 @@ body {
     border: none;
     outline: none;
     padding-top: 100px;
-    overflow:hidden;
+    overflow-y: auto;
     resize: none;
+}
+
+#editor::-webkit-scrollbar {
+    display: none;
 }
 
 #editor::placeholder {
